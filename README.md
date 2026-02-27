@@ -42,8 +42,8 @@ To install AWS-cli
 sudo snap install aws-cli --classic
 aws configure
 
-Access_key :xxxxxxxxxxxxxxx ( AKIA3PZSDQI33J32U3HN )
-Security_key:xxxxxxxxxxxxxxxxx( nrkAEvULmPVum7MHhRp1XkyhUWITZR3UyLEPLyUa)
+Access_key :xxxxxxxxxxxxxxx
+Security_key:xxxxxxxxxxxxxxxxx
 
 Maven Install 
 
