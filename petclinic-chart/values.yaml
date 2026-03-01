@@ -1,0 +1,11 @@
+replicaCount: 1
+
+image:
+  repository: shivaram1918/spring-petclinic-8
+  tag: v3
+
+service:
+  type: LoadBalancer
+  port: 80
+
+containerPort: 8080
