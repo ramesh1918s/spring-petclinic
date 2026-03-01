@@ -3,8 +3,24 @@
 
 Project Workflow
 
+<<<<<<< HEAD
+=======
+See the presentation here:  
+[Spring Petclinic Sample Application (legacy slides)](https://speakerdeck.com/michaelisvy/spring-petclinic-sample-application?slide=20)
+
+> **Note:** These slides refer to a legacy, pre–Spring Boot version of Petclinic and may not reflect the current Spring Boot–based implementation.  
+> For up-to-date information, please refer to this repository and its documentation.
+
+>>>>>>> e316074300de4761f7b100a21423525e8b8ecdc5
 
 
+<<<<<<< HEAD
+=======
+Spring Petclinic is a [Spring Boot](https://spring.io/guides/gs/spring-boot) application built using [Maven](https://spring.io/guides/gs/maven/) or [Gradle](https://spring.io/guides/gs/gradle/).
+Java 17 or later is required for the build, and the application can run with Java 17 or newer.
+
+You first need to clone the project locally:
+>>>>>>> e316074300de4761f7b100a21423525e8b8ecdc5
 
 Step 1: Create EC2 Instance type is t2-Large Install  All Dependencies
 
@@ -82,16 +98,31 @@ Git Clone My github repo for petclinic project
 
 git clone https://github.com/ramesh1918s/spring-petclinic.git
 cd spring-petclinic
+<<<<<<< HEAD
 ls
 
 ubuntu@ip-191-43-1-66:~/spring-petclinic$ ls
 Dockerfile  LICENSE.txt  README.md  build.gradle  docker-compose.yml  gradle  gradlew  gradlew.bat  k8s  mvnw  mvnw.cmd  pom.xml  settings.gradle  src
+=======
+```
+If you are using Maven, you can start the application on the command-line as follows:
+
+```bash
+./mvnw spring-boot:run
+```
+With Gradle, the command is as follows:
+
+```bash
+./gradlew bootRun
+```
+>>>>>>> e316074300de4761f7b100a21423525e8b8ecdc5
 
 GitHub Login
 
 git config --global user.name "ramesh1918s"
 git config --global user.email "shivaram915454@gmail.com"
 
+<<<<<<< HEAD
 
 To Install SonarQube through docker image 
 
@@ -99,6 +130,10 @@ docker run -d \
   --name sonar \
   -p 9000:9000 \
   sonarqube:lts-community
+=======
+You can, of course, run Petclinic in your favorite IDE.
+See below for more details.
+>>>>>>> e316074300de4761f7b100a21423525e8b8ecdc5
 
 
 
@@ -123,12 +158,24 @@ Ok its
 squ_f861be9d999b9049f7d5d048154fb8d48062ee6b
 Jenkins Setup for Sonarqube install  SonarQube Scanner for Jenkins plugin
 
+<<<<<<< HEAD
 Go to Jenkins → Manage Jenkins  Plugins - Available plugins Search (Sonarqube) 
 → Configure System
 Add your SonarQube instance under SonarQube servers
+=======
+```bash
+docker run -e MYSQL_USER=petclinic -e MYSQL_PASSWORD=petclinic -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=petclinic -p 3306:3306 mysql:9.5
+```
+>>>>>>> e316074300de4761f7b100a21423525e8b8ecdc5
 
 
+<<<<<<< HEAD
 Name: SonarQube
+=======
+```bash
+docker run -e POSTGRES_USER=petclinic -e POSTGRES_PASSWORD=petclinic -e POSTGRES_DB=petclinic -p 5432:5432 postgres:18.1
+```
+>>>>>>> e316074300de4761f7b100a21423525e8b8ecdc5
 
 
 Server URL: http://54.167.235.121:9000
@@ -171,12 +218,23 @@ pipeline {
         maven 'Maven3'  
     }
 
+<<<<<<< HEAD
     stages {
         stage('Checkout') {
             steps {
                 git branch: 'main', url: 'https://github.com/ramesh1918s/spring-petclinic.git'
             }
         }
+=======
+- Java 17 or newer (full JDK, not a JRE)
+- [Git command line tool](https://help.github.com/articles/set-up-git)
+- Your preferred IDE
+  - Eclipse with the m2e plugin. Note: when m2e is available, there is a m2 icon in `Help -> About` dialog. If m2e is
+  not there, follow the installation process [here](https://www.eclipse.org/m2e/)
+  - [Spring Tools Suite](https://spring.io/tools) (STS)
+  - [IntelliJ IDEA](https://www.jetbrains.com/idea/)
+  - [VS Code](https://code.visualstudio.com)
+>>>>>>> e316074300de4761f7b100a21423525e8b8ecdc5
 
         stage('SonarQube Analysis') {
             steps {
