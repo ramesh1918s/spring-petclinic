@@ -9,3 +9,10 @@ service:
   port: 80
 
 containerPort: 8080
+
+
+additionalScrapeConfigs:
+  - job_name: 'jenkins'
+    metrics_path: /prometheus
+    static_configs:
+      - targets: ['jenkins-service:8080']
